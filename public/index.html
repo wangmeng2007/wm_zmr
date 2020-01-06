@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+
+<body>
+<div id="app">
+    {{title}}
+    <br>
+    <p :name="p"></p>
+    <ul>
+        <template v-for="(fav,index) of favs">
+
+        </template>
+    </ul>
+</div>
+<script>
+    let opt={
+        el:'#app',
+        data:{
+            title:"hello",
+            p:'p1',
+            isActive:true,
+            isWarn:true,
+            favs:[{id:3,type:"basketball"},{id:4,type:"football"}]
+        },
+        component:{
+            "hello":{template:'<h1></h1>>'}
+        },
+        method:{
+            submit() {
+            }
+        }
+    };
+    new Vue(opt)
+
+</script>
+</body>
+</html>
